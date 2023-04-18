@@ -2,14 +2,13 @@ package com.security.pwd.insert_pwd_manager_demo.authentication.controller;
 
 import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationResult;
 import com.security.pwd.insert_pwd_manager_demo.authentication.util.JitGatewayUtil;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
 import javax.annotation.PostConstruct;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Controller
@@ -22,7 +21,7 @@ public class RandomController {
     private boolean configItemRightFlag = true;
 
     public RandomController(@Value("${propertiesURL}") String propertiesURL) {
-        System.out.println("create class RandomController");
+        System.out.println("创建类：RandomController");
         this.propertiesURL = propertiesURL;
     }
 
@@ -79,7 +78,6 @@ public class RandomController {
             System.out.println("生成原文结束，成功生成原文：" + randNum);
         }
 
-        // 同步回调
         return "{\"original_data\":\"" + randNum + "\",\"QRCodeAuth\":\"" + qrCodeAuthStr + "\",\"original\":\"" + randNum + "\",\"pinCode\":\"" + pinCode + "\"}";
     }
 }

@@ -3,7 +3,6 @@ package com.security.pwd.insert_pwd_manager_demo.authentication.test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -23,13 +22,13 @@ public class DefaultKeyAuthStrategy implements KeyAuthStrategy {
     @Autowired
     private HttpUtils httpUtils;
 
-    @Value("${password-service.auth.server.url}")
+//    @Value("${password-service.auth.server.url}")
     private String authServerUrl;
 
-    @Value("${password-service.auth.server.key.endpoint}")
+//    @Value("${password-service.auth.server.key.endpoint}")
     private String authServerKeyEndpoint;
 
-    @Value("${password-service.auth.server.auth.endpoint}")
+//    @Value("${password-service.auth.server.auth.endpoint}")
     private String authServerAuthEndpoint;
 
 
