@@ -1,11 +1,9 @@
 package com.security.pwd.insert_pwd_manager_demo.authentication.test;
 
+import org.apache.tomcat.websocket.AuthenticationException;
 import org.springframework.util.DigestUtils;
 
-import java.security.NoSuchAlgorithmException;
-import java.security.PrivateKey;
-import java.security.Signature;
-import java.security.SignatureException;
+import java.security.*;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;

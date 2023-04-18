@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import java.security.Signature;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
+import java.util.Base64;
 
 public class DefaultKeyAuthStrategy implements KeyAuthStrategy {
 
@@ -44,7 +45,7 @@ public class DefaultKeyAuthStrategy implements KeyAuthStrategy {
             signature.initSign(this.privateKey);
             signature.update(authorizationCode.getBytes());
             byte[] signatureBytes = signature.sign();
-            byte[] encodedSignatureBytes = Base64.encodeBase64(signatureBytes);
+            byte[] encodedSignatureBytes = Base64.getEncoder().encode(signatureBytes);
             return new String(encodedSignatureBytes);
         } catch (Exception e) {
             throw new PasswordServiceException("Failed to sign authorization code: " + e.getMessage());
@@ -60,5 +61,6 @@ public class DefaultKeyAuthStrategy implements KeyAuthStrategy {
         authenticationRequest.setAppId(appId);
         authenticationRequest.setSignedAuthorizationCode(signedAuthorizationCode);
         HttpEntity<AuthenticationRequest> requestEntity = new HttpEntity<>(authenticationRequest, headers);
-
-        ResponseEntity<TokenResult> responseEntity = restTemplate.exchange
+        return null;
+    }
+}
