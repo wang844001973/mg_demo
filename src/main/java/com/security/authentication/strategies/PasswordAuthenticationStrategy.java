@@ -1,8 +1,8 @@
-package com.security.pwd.insert_pwd_manager_demo.authentication.strategies;
+package com.security.authentication.strategies;
 
-import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationResult;
-import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationStrategy;
-import com.security.pwd.insert_pwd_manager_demo.authentication.test.HttpUtils;
+import com.security.authentication.AuthenticationResult;
+import com.security.authentication.AuthenticationStrategy;
+import com.security.authentication.test.HttpUtils;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;

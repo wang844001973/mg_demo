@@ -1,4 +1,4 @@
-package com.security.pwd.insert_pwd_manager_demo.authentication.util;
+package com.security.authentication.util;
 import org.apache.commons.httpclient.ConnectTimeoutException;
 import org.apache.commons.httpclient.params.HttpConnectionParams;
 import org.apache.commons.httpclient.protocol.ProtocolSocketFactory;

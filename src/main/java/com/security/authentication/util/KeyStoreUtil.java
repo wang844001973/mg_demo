@@ -1,4 +1,4 @@
-package com.security.pwd.insert_pwd_manager_demo.authentication.util;
+package com.security.authentication.util;
 
 import org.apache.commons.codec.binary.Base64;
 import org.bouncycastle.asn1.gm.GMObjectIdentifiers;

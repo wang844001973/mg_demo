@@ -1,9 +1,9 @@
-package com.security.pwd.insert_pwd_manager_demo.authentication.Impl;
+package com.security.authentication.Impl;
 
-import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationResult;
-import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationService;
-import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationStrategy;
-import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationStrategyFactory;
+import com.security.authentication.AuthenticationResult;
+import com.security.authentication.AuthenticationService;
+import com.security.authentication.AuthenticationStrategy;
+import com.security.authentication.AuthenticationStrategyFactory;
 
 import java.util.Map;
 

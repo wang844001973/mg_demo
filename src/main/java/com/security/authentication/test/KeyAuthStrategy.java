@@ -1,4 +1,4 @@
-package com.security.pwd.insert_pwd_manager_demo.authentication.test;
+package com.security.authentication.test;
 
 public interface KeyAuthStrategy {
     String getAuthorizationCode(String appId) throws PasswordServiceException;

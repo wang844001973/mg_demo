@@ -1,4 +1,4 @@
-package com.security.pwd.insert_pwd_manager_demo;
+package com.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

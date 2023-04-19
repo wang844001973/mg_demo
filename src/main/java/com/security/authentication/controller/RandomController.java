@@ -1,7 +1,7 @@
-package com.security.pwd.insert_pwd_manager_demo.authentication.controller;
+package com.security.authentication.controller;
 
-import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationResult;
-import com.security.pwd.insert_pwd_manager_demo.authentication.util.JitGatewayUtil;
+import com.security.authentication.AuthenticationResult;
+import com.security.authentication.util.JitGatewayUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

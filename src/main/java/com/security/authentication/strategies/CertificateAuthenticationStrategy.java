@@ -1,7 +1,7 @@
-package com.security.pwd.insert_pwd_manager_demo.authentication.strategies;
+package com.security.authentication.strategies;
 
-import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationResult;
-import com.security.pwd.insert_pwd_manager_demo.authentication.AuthenticationStrategy;
+import com.security.authentication.AuthenticationResult;
+import com.security.authentication.AuthenticationStrategy;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

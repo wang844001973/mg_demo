@@ -1,4 +1,4 @@
-package com.security.pwd.insert_pwd_manager_demo.authentication.util;
+package com.security.authentication.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
