@@ -1,8 +1,9 @@
 package com.security.authentication;
 
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public interface AuthenticationService {
-    AuthenticationResult authenticate(String strategyName, Map<String, String> credentials);
+    AuthenticationResult authenticate(String strategyName, HttpServletRequest request, HttpServletResponse response);
 
 }

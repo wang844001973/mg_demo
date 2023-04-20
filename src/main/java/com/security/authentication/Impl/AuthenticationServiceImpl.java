@@ -4,9 +4,12 @@ import com.security.authentication.AuthenticationResult;
 import com.security.authentication.AuthenticationService;
 import com.security.authentication.AuthenticationStrategy;
 import com.security.authentication.AuthenticationStrategyFactory;
+import org.springframework.stereotype.Service;
 
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+@Service
 public class AuthenticationServiceImpl implements AuthenticationService {
     private final AuthenticationStrategyFactory strategyFactory;
 
@@ -15,8 +18,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public AuthenticationResult authenticate(String strategyName, Map<String, String> credentials) {
+    public AuthenticationResult authenticate(String strategyName, HttpServletRequest request, HttpServletResponse response) {
         AuthenticationStrategy strategy = strategyFactory.getStrategy(strategyName);
-        return strategy.authenticate(credentials);
+        return strategy.authenticate(request,response);
     }
 }

@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,21 +20,12 @@ import java.util.Map;
 public class AuthenFinishedController{
 
 	// 生成原文后的跳转地址
-	@Value("${jit.AuthenFinished.url}")
+	@Value("${jit.AuthenSuccess.url}")
 	private String forwardURL = null;
-	
-
-	public void init(ServletConfig cfg) throws ServletException {
-		// 读取参数-跳转页面
-		forwardURL = cfg.getInitParameter("url");
-	}
 
 	@RequestMapping("/authenFinished")
-	protected void authenFinished(HttpServletRequest req, HttpServletResponse resp)
+	protected void authenFinished(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		HttpServletRequest request = (HttpServletRequest) req;
-		HttpServletResponse response = (HttpServletResponse) resp;
-		
 		// 认证后的信息已放入request,以下代码说明request中的内容
 		// 应用改造时可把认证信息保存到其它对象中比如session,供应用使用
 		
