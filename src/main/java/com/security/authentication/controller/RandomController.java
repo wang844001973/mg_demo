@@ -4,26 +4,23 @@ import com.security.authentication.AuthenticationResult;
 import com.security.authentication.util.JitGatewayUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import javax.annotation.PostConstruct;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 @Controller
 public class RandomController {
 
     // 配置文件地址
-    private String propertiesURL = null;
+    @Value("${jit.propertiesURL}")
+    private String propertiesURL ;
 
     // 配置文件正确标记
     private boolean configItemRightFlag = true;
 
-    public RandomController(@Value("${propertiesURL}") String propertiesURL) {
-        System.out.println("创建类：RandomController");
-        this.propertiesURL = propertiesURL;
-    }
 
     @PostConstruct
     public void init() {
@@ -35,8 +32,9 @@ public class RandomController {
         System.out.println("生成原文初始化结束");
     }
 
-    @GetMapping("/jitGWRandom")
-    public Object getRandom(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    @RequestMapping("/jitGWRandom")
+    @ResponseBody
+    public Object getRandom(HttpServletRequest request, HttpServletResponse response) {
         // 配置文件不正确则返回
         if (!configItemRightFlag) {
             System.out.println("配置文件不正确");
