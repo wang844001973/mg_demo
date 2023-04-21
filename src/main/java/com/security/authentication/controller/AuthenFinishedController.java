@@ -21,7 +21,7 @@ public class AuthenFinishedController{
 
 	// 生成原文后的跳转地址
 	@Value("${jit.AuthenSuccess.url}")
-	private String forwardURL = null;
+	private String forwardURL;
 
 	@RequestMapping("/authenFinished")
 	protected void authenFinished(HttpServletRequest request, HttpServletResponse response)

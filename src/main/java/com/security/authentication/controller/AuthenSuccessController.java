@@ -16,7 +16,7 @@ public class AuthenSuccessController {
         this.authenSuccessService = authenSuccessService;
     }
 
-    @RequestMapping("${jit.AuthenSuccess.url }")
+    @RequestMapping("${jit.AuthenSuccess.url}")
     public void login(HttpServletRequest request, HttpServletResponse response) throws IOException {
         authenSuccessService.doPointLogin(request,response);
     }
